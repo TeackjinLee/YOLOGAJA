@@ -1,7 +1,8 @@
 body{
-  font-size: 14px;
+  font-size: 16px;
   height:3000px;
 }
+
 .wrap.show{
   opacity: 1;
   visibility: visible;
@@ -23,7 +24,7 @@ a {
     text-decoration: none;
 }
 
-/* ���̺귯�� */
+/* �씪�씠釉뚮윭由� */
 .cell {
     float: left;
 }
@@ -42,100 +43,230 @@ a {
     max-width: 1024px;
     margin: 0 auto;
 }
-header{
-  position:fixed;
-  top:0px;
-  left:0px;
-  right:0px;
-  height:72px;
-  transition:0.4s;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-  display:block;
+
+*{
+  padding:0;
+  margin:0;
 }
-#head_link ul li{
-  padding-left: 20px;
-  padding-right: 20px;
-  border-right: 1px solid #ddd;
+
+.slider-wrap{
+  width:100%;
+  margin: 0 auto ;
+}
+.slider-contents{
+  z-index: 9;
+}
+.slider-contents > a > img{
+  width: 100%;
+  max-height: initial;
+  margin-top: -150px;
+}
+
+.slider-contents > a > video{
+  width: 100%;
+  max-height: initial;
+  margin-bottom: -50px;
+}
+
+.slick-dots{
   color: #777;
+  font-weight: bold;
+  bottom: -40px;
 }
 
-header section{
-  background: rgb(112, 173, 71);
+.slider-wrap .slick-dots li{
+  padding-top: 30px;
+  width: 11.5% ;
+  height: auto ;
 }
 
-header section .menu{
+.slick-prev{
+  left: 25px;
+  z-index: 9;
+}
+
+.slick-next {
+  right: 25px;
+  z-index: 9;
+}
+
+.slider-contents > a > .text-box{
   position: relative;
-  height: 64px;
+  margin-left:0;
+  color: white;
+  z-index: 9;
+}
+
+.slider-contents > a > .text-box > .text {
+    position: absolute;
+    bottom: 0;
+    right: -9%;
+    z-index: 9;
+    padding-bottom: 3%;
+    text-align:left;
+}
+
+.slider-contents > a > .text-box > .text > img{
+  width: 60%;
+  margin-top: 10px;
+}
+
+.slick-prev:before, .slick-next:before{
+	font-size:30px;
+}
+
+/* 硫붿씤 濡쒓퀬 �씠誘몄� */
+.main-link{
+  width: 100%;
+  margin-top:40px;
+  margin-bottom: 150px;
+}
+
+.main-link .main-logo-box ul li{
+  padding-top: 30px;
+    width: 12.5%;
+    height: auto;
+    position: relative;
+}
+.main-link .main-logo-box ul li a img{
+  margin: 0 auto;
+  position: absolute;
+  left: 16%;
+}
+
+/* YOLO媛��옄!而ㅻ�ㅻ땲�떚 */
+.main-community{
+  width: 100%;
+}
+.main-community .community-name{
+  width:300px;
   margin: 0 auto;
 }
-
-header section .menu #logo h1 a {
-  position: absolute;
-  top: 20px;
-  width: 96px;
-  height: 30px;
-  margin: 0;
-  font-size: 18px;
+.main-community .community-name img{
+  width:40%;
+  float:left;
+}
+.main-community .community-name p{
+  width:60%;
+  float:left;
   font-weight: bold;
-  color: white;
-  font-weight:bold;
-}
-
-header section .menu .menu-bar{
-  position: absolute;
-  top: 10px;
-  right: 0px;
-  height: 50px;
-  background: red;
-}
-header section .menu .menu-bar > .btn_srch{
-  position: absolute;
-  left:0px;
-  top: 10px;
-  border: none;
-  text-indent: -9999px;
-  width: 28px;
-  height: 30px;
-  background: url(https://image.goodchoice.kr/images/web_v3/ico_srch_2.png) 50%;
-  background-size: 24px auto;
-  z-index:10;
-  cursor: pointer;
-}
-
-header section .menu .menu-bar .gnb-list{
-  background: green;
-}
-
-header > section > .menu > .menu-bar > .gnb-list > li{
-  color: white;
   font-size: 18px;
-  margin-left: 30px;
-  cursor: pointer;
+  text-align: left;
 }
 
-header > section .menu > .menu-bar > .gnb-list > li > .sub-menu-box{
-  visibility: hidden;
-  position: absolute;
-  width: 170px;
-  background: white;
+.community-box{
+  padding-top: 50px;
+}
+.img-box > img{
+  width: 100% ;
+  display: block ;
+}
+.content-wrap{
+  height: 300px ;
+  overflow: hidden ;
+}
+.content-wrap > .content-list{
+  width: 1050px ;
+  height: auto ;
+  position: relative ;
+  top: -300px ;
+  transition: 1s ;
+}
+.content-wrap > .content-list > .content-box-1{
+  width: 100% ;
+}
+.content-wrap > .content-list > .content-box-2{
+  width: 100% ;
+}
+.content-wrap > .content-list > .content-box-3{
+  width: 100% ;
+}
+.content-wrap > .content-list > .content-box-4{
+  width: 100% ;
+}
+.content-wrap > .content-list > .content-box > ul{
+  overflow: hidden ;
+}
+.content-wrap > .content-list > .content-box > ul > li{
+  display: block ;
+  width: 25% ;
+  height: 300px ;
+  padding: 5px ;
+  box-sizing: border-box ;
+  
+}
+.content-wrap > .content-list > .content-box > ul > li > a > img{
+  display: block ;
+  width: 100% ;
+  height: 100% ;
+  object-fit: cover ;
+}
+
+/* YOLO媛��옄! 荑좏룿 而ㅻ�ㅻ땲�떚 */
+.main-guest{
+  width:100%;
+  height: 300px;
+  margin-top: 50px;
+}
+/* yolo�씠踰ㅽ듃 */
+.main-guest .guest-box{
+  width: 50%;
+  height: 100%;
+}
+.main-guest .guest-box .title{
+  width: 300px;
+  height: 15%;
+}
+.main-guest .guest-box .title .community-name img{
+  width: 40%;
+  float: left;
+}
+.main-guest .guest-box .title .community-name p{
+  width: 60%;
+  float: left;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left;
+}
+.main-guest .guest-box .coupon-box{
+  width: 98%;
+  height: 85%;
+}
+.main-guest .guest-box .coupon-box a img{
+  width: 100%;
   border: 1px solid #ddd;
-  border-radius: 9px;
-  color: #777;
-  padding-top: 5px;
 }
-header > section .menu > .menu-bar > .gnb-list > li:hover > .sub-menu-box {
-  visibility: visible;
+/* 寃뚯뒪�듃�븯�슦�뒪 */
+.main-guest .business-box{
+  width: 50%;
+  height: 100%;
 }
-
-header > section .menu > .menu-bar > .gnb-list > li > .sub-menu-box ul{
-  padding-left: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+.main-guest .business-box{
+  width: 50%;
+  height: 100%;
 }
-header > section .menu > .menu-bar > .gnb-list > li > .sub-menu-box ul li{
-  padding-top: 2px;
-  padding-bottom: 2px;
+.main-guest .business-box .title{
+  width: 300px;
+  height: 15%;
+}
+.main-guest .business-box .title .community-name img{
+  width: 30%;
+  float: left;
+  margin-top: 5px;
+}
+.main-guest .business-box .title .community-name p{
+  width: 60%;
+  float: left;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left;
+}
+.main-guest .business-box .host-box{
+  width: 98%;
+  height: 85%;
+  float: right;
+}
+.main-guest .business-box .host-box a img{
+  width: 100%;
+  border: 1px solid #ddd;
 }

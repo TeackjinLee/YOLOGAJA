@@ -1,27 +1,43 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"
-    isELIgnored="false"
-    %>
-<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>    
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<c:set var="contextPath"  value="${pageContext.request.contextPath}" />
+<!-- 기여도 : 이택진100% -->
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"
+    isELIgnored="false" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+  request.setCharacterEncoding("UTF-8");
+%> 
+<c:set var="contextPath"  value="${pageContext.request.contextPath}"  />
 
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="UTF-8">
+<title>헤더</title>
+<link href="${contextPath}/resources/css/header.css" rel="stylesheet" type="text/css" media="screen">
+</head>
 <body>
-	<!-- 기여도 : 이택진100% -->
 	<div class="wrap main_wrap show">
 	  <!-- Header -->
 	  <header>
 	    <div id="head_link" class="con">
 	      <ul class = row>
-	        <li class = cell-r><a href="#">회원가입</a></li>
-	        <li class = cell-r><a href="#">로그인</a></li>
+	      	<c:choose>
+	      		<c:when test="${isLogOn == true  && member!= null}">
+	      			<li class = cell-r><a href="#">마이페이지</a></li>
+	      			<li class = cell-r><a href="#">장바구니</a></li>
+	        		<li class = cell-r><a href="${contextPath}/member/logout.do">로그아웃</a></li>
+	      		</c:when>
+	      		<c:otherwise>
+	      			<li class = cell-r><a href="${contextPath}/member/memberForm.do">회원가입</a></li>
+	        		<li class = cell-r><a href="${contextPath}/member/loginForm.do">로그인</a></li>
+	      		</c:otherwise>
+	      	</c:choose>
 	      </ul>
 	    </div>
 	    <section>
 	      <div class="menu con">
-	        <div id = "logo"><h1><a href="#">YOLO가자!</a></h1></div>
+	        <div id = "logo"><h1><a href="${contextPath}/main.do"><img src="${contextPath}/resources/image/yolo-logo-w.png" alt="YOLO가자로고"></a></h1></div>
 	        <div class="menu-bar row">
 	          <button type="button" class="btn_srch srch_open ">검색</button>
 	          <ul class="gnb-list row cell">
@@ -67,7 +83,6 @@
 	      </div>
 	    </section>
 	  </header>
-	  
 	</div>
 </body>
 </html>
