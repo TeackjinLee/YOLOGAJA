@@ -37,22 +37,43 @@
 	    </div>
 	    <section>
 	      <div class="menu con">
-	        <div id = "logo"><h1><a href="${contextPath}/main.do"><img src="${contextPath}/resources/image/yolo-logo-w.png" alt="YOLO가자로고"></a></h1></div>
+	        <div id = "logo"><a href="${contextPath}/main.do"><img src="${contextPath}/resources/image/yolo-logo-w.png" alt="YOLO가자로고"></a></div>
 	        <div class="menu-bar row">
-	          <button type="button" class="btn_srch srch_open ">검색</button>
+		        <div id="search" class="cell">
+		            <form name="frmSearch" action="" >
+		              <input type="checkbox" id="toggleBtn">
+		              <label for="toggleBtn" class="toggleBtn">&nbsp;&nbsp; &nbsp;</label>
+					  <!--  <input type="submit" name="search" class="btn1"  value="검 색" > -->
+		              <input name="searchWord" id="toggleBtnOn" class="main_input" type="text"  onKeyUp="keywordSearch()" placeholder="지역, 숙소명" >
+		            </form>
+	             </div>
+		         <div id="suggest" class="cell">
+		                <div id="suggestList"></div>
+		          </div>
+           		<!--  
+				<div id="search" class="cell">
+				 <form name="frmSearch" action="" >
+				   <input type="submit" name="search" class="btn1"  value="검 색" >
+				   <input name="searchWord" class="main_input" type="text"  onKeyUp="keywordSearch()" placeholder="지역, 숙소명" >
+				  </form>
+				</div>
+				<div id="suggest" class="cell">
+				      <div id="suggestList"></div>
+				 </div>
+				 -->
 	          <ul class="gnb-list row cell">
 	            <li class="cell">
 	              <div>숙박종류</div>
 	              <div class="sub-menu-box">
 	                <ul>
-	                  <li><a href="#">모텔</a></li>
-	                  <li><a href="#">호텔</a></li>
-	                  <li><a href="#">펜션</a></li>
-	                  <li><a href="#">리조트</a></li>
-	                  <li><a href="#">게스트하우스</a></li>
-	                  <li><a href="#">캠핑/글램핑</a></li>
-	                  <li><a href="#">한옥</a></li>
-	                  <li><a href="#">내주변</a></li>
+	                  <li><a href="${contextPath}/searchGoods.do">모텔</a></li>
+	                  <li><a href="${contextPath}/searchGoods.do">호텔</a></li>
+	                  <li><a href="${contextPath}/searchGoods.do">펜션</a></li>
+	                  <li><a href="${contextPath}/searchGoods.do">리조트</a></li>
+	                  <li><a href="${contextPath}/searchGoods.do">게스트하우스</a></li>
+	                  <li><a href="${contextPath}/searchGoods.do">캠핑/글램핑</a></li>
+	                  <li><a href="${contextPath}/searchGoods.do">한옥</a></li>
+	                  <li><a href="${contextPath}/searchGoods.do">내주변</a></li>
 	                </ul>
 	              </div>  
 	             </li>

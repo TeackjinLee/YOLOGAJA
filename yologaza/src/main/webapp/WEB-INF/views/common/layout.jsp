@@ -20,11 +20,10 @@
       }
       #header {
         padding: 50px;
-        margin-bottom: 5px;
       }
       #sidebar-left {
         width: 15%;
-        height:700px;
+        height:100px;
         padding: 5px;
         float:left;
         margin-right: 5px;
@@ -33,17 +32,12 @@
         font-size:10px;
       }
       #content {
-        width: 100%;
-        padding: 5px;
-        margin-right: 5px;
-        float: left;
-        border: 0px solid #bcbcbc;
+
       }
       #footer {
         clear: both;
-        padding: 5px;
+		margin-top: 30px;
         border: 0px solid #bcbcbc;
-         background-color: lightblue;
       }
       
     </style>

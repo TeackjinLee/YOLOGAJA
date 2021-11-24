@@ -1,6 +1,5 @@
 body{
   font-size: 14px;
-  height:3000px;
 }
 .wrap.show{
   opacity: 1;
@@ -48,7 +47,7 @@ header{
   top:0px;
   left:0px;
   right:0px;
-  height:72px;
+  height: auto;
   transition:0.4s;
   background:white;
   margin: 0;
@@ -56,7 +55,14 @@ header{
   border: 0;
   box-sizing: border-box;
   display:block;
+  font-size: 14px;
   z-index: 99;
+}
+#head_link ul{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 0;
+    margin-bottom: 0;
 }
 #head_link ul li{
   padding-left: 20px;
@@ -75,7 +81,36 @@ header section .menu{
   margin: 0 auto;
 }
 
-header section .menu #logo h1 a {
+/* 검색 */
+header section .menu .menu-bar #search{
+  margin-top: 15px;
+}
+#toggleBtn{
+  display:none;
+}
+ #toggleBtnOn{
+  width: 0px;
+  border: none;
+  background-color: rgb(112, 173, 71);
+  transition: all 0.3s;
+}
+#toggleBtn:checked ~ #toggleBtnOn {
+    width: 420px;
+    transition: all 0.3s;
+}
+.toggleBtn{
+  border: none;
+  text-indent: -99px;
+  width: 28px;
+  height: 30px;
+  background: url(https://image.goodchoice.kr/images/web_v3/ico_srch_2.png) 50%;
+  background-size: 24px auto;
+  z-index:10;
+  cursor: pointer;
+}
+
+/* 로고 */
+header section .menu #logo a {
   position: absolute;
   top: 20px;
   left: 0;
@@ -87,7 +122,7 @@ header section .menu #logo h1 a {
   color: white;
   font-weight:bold;
 }
-header section .menu #logo h1 a img{
+header section .menu #logo a img{
   width: 130%;
 }
 header section .menu .menu-bar{
@@ -95,15 +130,16 @@ header section .menu .menu-bar{
   top: 10px;
   right: 0px;
   height: 50px;
+  padding-left: 0px;
 }
 header section .menu .menu-bar > .btn_srch{
   position: absolute;
-  left:0px;
+  left: -10px;
   top: 10px;
   border: none;
   text-indent: -9999px;
   width: 28px;
-  height: 30px;
+  height: 28px;
   background: url(https://image.goodchoice.kr/images/web_v3/ico_srch_2.png) 50%;
   background-size: 24px auto;
   z-index:10;
@@ -111,12 +147,21 @@ header section .menu .menu-bar > .btn_srch{
 }    
 header > section > .menu > .menu-bar > .gnb-list{
   margin-top: 10px;
+  padding-left: 0;
 }
 header > section > .menu > .menu-bar > .gnb-list > li{
   color: white;
   font-size: 18px;
   margin-left: 30px;
   cursor: pointer;
+  color: rgba(255,255,255,0.8);
+}
+header > section > .menu > .menu-bar > .gnb-list > li:hover{
+  color: white;
+  font-size: 18px;
+  margin-left: 30px;
+  cursor: pointer;
+  color: rgba(255,255,255);
 }
 
 header > section .menu > .menu-bar > .gnb-list > li > .sub-menu-box{
@@ -128,7 +173,6 @@ header > section .menu > .menu-bar > .gnb-list > li > .sub-menu-box{
   border-radius: 9px;
   color: #777;
   padding-top: 5px;
-  margin-top: 5px;
 }
 
 header > section .menu > .menu-bar > .gnb-list > li:hover > .sub-menu-box {
